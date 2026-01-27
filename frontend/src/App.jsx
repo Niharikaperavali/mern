@@ -25,8 +25,13 @@ import Home from "./pages/Home"
 import About from "./pages/about"
 import Service from "./pages/Service"
 import UseState from "./Hooks/UseState"
+import UseEffect from "./Hooks/UseEffect"
 import Login from "./Auth/Login"
+import Signup from "./Auth/Signup"
+import UseEffectApi from "./Hooks/UseEffectApi"
 import {Routes,Route} from "react-router-dom"
+import Hook from "./Hooks/Hook"
+import UseRef from "./Hooks/UseRef"
 
 
 const App = () => {
@@ -41,7 +46,15 @@ const App = () => {
         <Route path="/Contactus" element={<Contactus />} />
         <Route path="/Service" element={<Service />} />
         <Route path="/useState" element={<UseState />} />
+        <Route path='/useEffect' element={<UseEffect/>}/>
         <Route path="/login" element={<Login />} />
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/hook' element={<Hook/>}>
+            <Route path='useState' element={<UseState />} />
+            <Route path='useEffect' element={<UseEffect/>}/>
+            <Route path='useeffectapi' element={<UseEffectApi/>}/>
+            <Route path='useRef' element={<UseRef/>}/>
+        </Route>
       </Routes>
     </div>
   )
