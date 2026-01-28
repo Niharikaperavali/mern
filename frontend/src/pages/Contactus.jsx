@@ -1,9 +1,16 @@
-import React from 'react'
+import React,{useState} from 'react'
+import Service from './Service';
 
-const Contactus = () => {
+const Contactus = (props) => {
+  const [name, setName] = useState("Nihari");
+  const toggleName = () => {
+    setName(name === "Nihari" ? "Niha" : "Nihari");
+  }
   return (
     <div>
-      <h1>Contact Us Page</h1>
+      <h1>Name: {name}</h1>
+      <button onClick={toggleName}>Toggle</button>
+
     </div>
   )
 }

@@ -22,7 +22,7 @@
 import Navbar from "./component/Navbar"
 import Contactus from "./pages/Contactus"
 import Home from "./pages/Home"
-import About from "./pages/about"
+import About from "./pages/About"
 import Service from "./pages/Service"
 import UseState from "./Hooks/UseState"
 import UseEffect from "./Hooks/UseEffect"
@@ -32,6 +32,7 @@ import UseEffectApi from "./Hooks/UseEffectApi"
 import {Routes,Route} from "react-router-dom"
 import Hook from "./Hooks/Hook"
 import UseRef from "./Hooks/UseRef"
+import UseReducer from "./Hooks/UseReducer"
 
 
 const App = () => {
@@ -42,9 +43,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/home" element={<Home name="Niha"/>} />  
-        <Route path="/about" element={<About name="am about page" registerNo="23691A3298" email="peravaliniharika@gmail.com" />} />
+        <Route path="/about" element={<About msg="am about page" registerNo="23691A3298" email="peravaliniharika@gmail.com" />} />
         <Route path="/Contactus" element={<Contactus />} />
-        <Route path="/Service" element={<Service />} />
+        <Route path="/Service" element={<Service  />} />
         <Route path="/useState" element={<UseState />} />
         <Route path='/useEffect' element={<UseEffect/>}/>
         <Route path="/login" element={<Login />} />
@@ -54,6 +55,7 @@ const App = () => {
             <Route path='useEffect' element={<UseEffect/>}/>
             <Route path='useeffectapi' element={<UseEffectApi/>}/>
             <Route path='useRef' element={<UseRef/>}/>
+            <Route path='useReducer' element={<UseReducer/>}/>
         </Route>
       </Routes>
     </div>

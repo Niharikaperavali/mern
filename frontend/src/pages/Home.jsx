@@ -11,6 +11,7 @@ const Home = ({name}) => {
     <div>
       <h1>{name}</h1>
       <button onClick={handleClick}>go to about page</button>
+  
     </div>
   )
 }

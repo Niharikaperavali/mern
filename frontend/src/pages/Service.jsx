@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import ThemeContext from '../context/ThemeContext';
+import AuthContext from '../context/AuthContext';
 
 const Service = () => {
+  const { theme } = useContext(ThemeContext);
+  const user = useContext(AuthContext); // ✅ FIX
+
   return (
     <div>
-      <h1>Service Page</h1>
+      <h1>{theme}</h1>
+      <p>ID: {user.id}</p>
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Service
+export default Service;
