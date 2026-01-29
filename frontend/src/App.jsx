@@ -20,6 +20,7 @@
 // export default App;
 
 import Navbar from "./component/Navbar"
+import Header from "./component/Header"
 import Contactus from "./pages/Contactus"
 import Home from "./pages/Home"
 import About from "./pages/About"
@@ -33,6 +34,8 @@ import {Routes,Route} from "react-router-dom"
 import Hook from "./Hooks/Hook"
 import UseRef from "./Hooks/UseRef"
 import UseReducer from "./Hooks/UseReducer"
+import UseMemo from "./Hooks/UseMemo"
+import UseCallback from "./Hooks/UseCallback"
 
 
 const App = () => {
@@ -50,12 +53,15 @@ const App = () => {
         <Route path='/useEffect' element={<UseEffect/>}/>
         <Route path="/login" element={<Login />} />
         <Route path='/signup' element={<Signup/>}/>
+    
         <Route path='/hook' element={<Hook/>}>
             <Route path='useState' element={<UseState />} />
             <Route path='useEffect' element={<UseEffect/>}/>
             <Route path='useeffectapi' element={<UseEffectApi/>}/>
             <Route path='useRef' element={<UseRef/>}/>
             <Route path='useReducer' element={<UseReducer/>}/>
+            <Route path='useMemo' element={<UseMemo/>}/>
+            <Route path="usecallback" element={<UseCallback/>}/>
         </Route>
       </Routes>
     </div>
