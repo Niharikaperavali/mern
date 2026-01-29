@@ -12,6 +12,8 @@ const Hooks = () => {
         <li><Link to="useeffectapi">UseEffectApi</Link></li>
         <li><Link to="useref">UseRef</Link></li>
         <li><Link to="useReducer">UseReducer</Link></li>
+        <li><Link to="UseMemo">UseMemo</Link></li>
+        <li><Link to="UseCallBack">UseCallBack</Link></li>
       </ol>
 
       <Outlet />

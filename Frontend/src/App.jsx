@@ -13,6 +13,8 @@ import UseRef from './Hooks/UseRef'
 import Login from './Auth/Login'
 import Signup from './Auth/Signup'
 import UseReducer from './Hooks/UseReducer'
+import UseMemo from './Hooks/UseMemo'
+import UseCallBack from './Hooks/UseCallBack'
 import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
@@ -37,6 +39,9 @@ const App = () => {
           <Route path='useeffectapi' element={<UseEffectApi />} />
           <Route path='useref' element={<UseRef />} />
           <Route path='UseReducer' element={<UseReducer/>}/>
+
+          <Route path='UseMemo' element={<UseMemo/>}/>
+          <Route path='UseCallBack' element={<UseCallBack/>}/>
         </Route>
       </Routes>
     </div>
