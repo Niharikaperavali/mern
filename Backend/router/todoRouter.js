@@ -4,9 +4,9 @@ const { getTodo, createTodo, updateTodo, deleteTodo } =
 
 const todoRoute = express.Router();
 
-todoRoute.get("/", getTodo);
-todoRoute.post("/create", createTodo);
-todoRoute.put("/update/:id", updateTodo);
-todoRoute.delete("/delete/:id", deleteTodo);
+todoRoute.get("/", getTodo);          // GET all
+todoRoute.post("/", createTodo);      // CREATE
+todoRoute.put("/:id", updateTodo);    // UPDATE
+todoRoute.delete("/:id", deleteTodo); // DELETE
 
 module.exports = todoRoute;

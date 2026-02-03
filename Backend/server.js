@@ -3,14 +3,14 @@ const todoRoute = require("./router/todoRouter");
 const dotenv = require("dotenv");
 const userRoute = require("./router/userRouter");
 
-
 dotenv.config();
-const app = express();
+const app = express
 
 app.use(express.json());
 
-app.use("/api/todo", todoRoute);
-app.use("/api/user",userRoute);
+// routes
+app.use("/api/todos", todoRoute);  // plural (best practice)
+app.use("/api/users", userRoute);  // plural (best practice)
 
 const PORT = process.env.PORT || 3000;
 
